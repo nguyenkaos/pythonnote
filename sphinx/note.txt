@@ -1,0 +1,38 @@
+:orphan:
+
+
+Pythonista Notes
+===================
+
+============
+Preface
+============
+ 
+This site contains my notes when I learn and work, also through my mistakes in python.
+
+I write this site, before, to keep my notes always on internet, then to share with you my experience. Please note that this site is not a tutorial and does not teach you Python. The topics are not explained in depth, instead only the minimum required information is given. Each topic contains 2 sections, one is very basic information and the other is the pyhon tips, which I found in my work or on internet.
+
+The If you are a beginner or even an intermediate programmer in python, there is something for you in this site. Let's start !!!
+
+==================
+Author
+==================
+
+I am NGUYEN Cao-Cuong. I have been programming extensively in Python for almost 3 years now and I still learn this language everydays. I'm relatively comfortable throughtout the language, having used it for a variety of simulations or build the web applications (Django).
+
+==================
+Table of Contents
+==================
+
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+
+   Types
+   Types_Numbers
+   Types_Sequences_String
+   Types_Sequences_Unicode
+   Types_Sequences_List
+   Types_Sequences_Tuple
+   Types_MappingSet_Dict
+   Types_MappingSet_Set
