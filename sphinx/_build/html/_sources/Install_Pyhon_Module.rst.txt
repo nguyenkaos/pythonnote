@@ -1,11 +1,10 @@
-About Python
+Install
 ---------------------
 
+Install python and module
+ 
 Basic
 ^^^^^^^^^^^^^^^
-
-- Python 2.7
-- Compare Python and other language
 
 Tips
 ^^^^^^^^^^^^^^^

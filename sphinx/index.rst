@@ -13,7 +13,8 @@ Table of Contents
     :numbered:
     
     About_Python
-    Operating_System_Mmodules
+    Install_Pyhon_Module
+    Operating_System_Modules
     Types
     Types_Numbers
     Types_Sequences_String
@@ -21,5 +22,8 @@ Table of Contents
     Types_Sequences_List
     Types_Sequences_Tuple
     Types_MappingSet_Dict
-    Types_MappingSet_Set
+    Types_MappingSet_Set 
+    Program_Structure
+    Multithread
+    Django
 
