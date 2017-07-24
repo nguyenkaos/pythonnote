@@ -5,6 +5,7 @@ Basic
 ^^^^^^^^^^^^^^^
 
 - Python 2.7
+- Compare Python and other language
 
 Tips
 ^^^^^^^^^^^^^^^
