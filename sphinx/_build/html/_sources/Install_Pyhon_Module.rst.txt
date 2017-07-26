@@ -1,10 +1,21 @@
 Install
 ---------------------
 
-Install python and module
- 
-Basic
-^^^^^^^^^^^^^^^
+Install python 
+^^^^^^^^^^^^^^^^^
 
-Tips
-^^^^^^^^^^^^^^^
+*Linux*
+
+Gererally, python is installed by default in Linux OS at the path */usr/bin/python*. To find this path, there are many ways, for me I like :
+
+.. code:: python
+
+    $ which python
+    /usr/bin/python
+
+*Linux*
+
+Install Module Python
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
