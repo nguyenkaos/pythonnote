@@ -7,6 +7,12 @@ Variable Types
 
 Built-In Types : 12
 
+Basic
+^^^^^^^^^^^^^^^
+
+**Mutable Object**
+
+
 Pointer
 ^^^^^^^^^^
 .. _pointer:
@@ -31,8 +37,6 @@ We see that ``i`` refers to an integer on memory has value 5 at first line, then
 
 If 2 *lists* ``a`` and  ``b`` refer at same object, when ``a`` changes, ``b`` changes also !
 
-Basic
-^^^^^^^^^^^^^^^
 
 Tips 
 ^^^^^^^^^^^^^^^

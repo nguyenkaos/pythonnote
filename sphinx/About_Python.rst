@@ -1,6 +1,7 @@
 About Python
 ---------------------
 
+ 
 **What's Python ?**
 
 - Python is an interpreted language, it is not a compiled language. This means that it needs to be run by another program, called the interpreter (`/usr/bin/python` in Linux or `python.exe` in Window) to generate the bytecode ``*.pyc``, rather than the processor itself. Not like as C, which runs directly on the processor, after a compilation to bytecode. 
@@ -45,5 +46,11 @@ This discussion is very huge on the internet, and there's some notes :
 
 - We must know that in 2020, python 2.7 will be not supported anymore and all modules will be released only for python3 :( Sometimes I try it, but the syntax is very different from version 2 but we have no choice, so now this's time to move to python 3 ! I advise that if we start a project now, we should try & work with version 3 with their packages/modules, and our project will be safe in 2020 :) 
 
- 
+- To show the current python using, on linux, we do
+
+.. code:: python
+
+    $ ls -l /usr/bin/python
+    /usr/bin/python -> python2.7
+
 
