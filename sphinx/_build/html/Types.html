@@ -219,9 +219,25 @@
 <p>Built-In Types : 12</p>
 <div class="section" id="pointer">
 <h2>4.1. Pointer<a class="headerlink" href="#pointer" title="Permalink to this headline">¶</a></h2>
+<div class="code python highlight-default" id="id1"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">j</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="go">5</span>
+</pre></div>
+</div>
+<p>We see that <code class="docutils literal"><span class="pre">i</span></code> refers to an integer on memory has value 5 at first line, then <code class="docutils literal"><span class="pre">j</span></code> refers to <code class="docutils literal"><span class="pre">i</span></code>, means <code class="docutils literal"><span class="pre">j</span></code> also refers to 5. But when we change <code class="docutils literal"><span class="pre">j</span></code> =3, that means <code class="docutils literal"><span class="pre">j</span></code> points to another location on memory. Because <code class="docutils literal"><span class="pre">i</span></code> is an integer which is an immutable object, so there’is not any change on <code class="docutils literal"><span class="pre">i</span></code>. And whats about mutable object <em>list</em> ?</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9999</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[0, 1, 9999, 3, 4]</span>
+</pre></div>
+</div>
+<p>If 2 <em>lists</em> <code class="docutils literal"><span class="pre">a</span></code> and  <code class="docutils literal"><span class="pre">b</span></code> refer at same object, when <code class="docutils literal"><span class="pre">a</span></code> changes, <code class="docutils literal"><span class="pre">b</span></code> changes also !</p>
 </div>
 <div class="section" id="basic">
-<span id="id1"></span><h2>4.2. Basic<a class="headerlink" href="#basic" title="Permalink to this headline">¶</a></h2>
+<h2>4.2. Basic<a class="headerlink" href="#basic" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="tips">
 <h2>4.3. Tips<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h2>

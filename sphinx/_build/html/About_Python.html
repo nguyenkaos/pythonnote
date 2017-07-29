@@ -224,33 +224,87 @@
 </ul>
 <p><strong>Compare Python and other language</strong></p>
 <p>This discussion is very huge on the internet, and there’s some notes :</p>
-<ul class="simple">
-<li>Very simple syntax. The easiest syntax, and readability are stated design goals of the language and it goes to great lengths to maintain that. For example, we have to write</li>
-<li>Does Python have <em>pointer</em> like as C ? No, python don’t have definition of pointer. <strong>All variables are names bound to objects</strong> ! We will speak at topic <a class="reference external" href="Types.html#pointer">pointer</a> .</li>
-<li>Performance : We all know that Python was written in C, which is very powerful language because it runs straigth off on the memory, that why we never speak at this topic. But I think it depends on the way to implement the algorithm of developer.</li>
-</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="44%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Feature</th>
+<th class="head"><div class="first last line-block">
+<div class="line">Python</div>
+</div>
+</th>
+<th class="head"><div class="first last line-block">
+<div class="line">C</div>
+</div>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Pointer</td>
+<td><div class="first last line-block">
+<div class="line">In python we dont have the definition</div>
+<div class="line">of pointer. All variables are names</div>
+<div class="line">bound to objects ! We will speak it at</div>
+<div class="line">topic  <a class="reference external" href="Types.html#pointer">pointer</a> .</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Yes</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>Type</td>
+<td><div class="first last line-block">
+<div class="line">Dynamic ! we can change object type</div>
+<div class="line">type of variables at run-time</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Static typing !</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>Varaible location</td>
+<td><div class="first last line-block">
+<div class="line">All objects in python stock in <strong>heap</strong></div>
+<div class="line">(whatever <code class="docutils literal"><span class="pre">int</span></code>, <code class="docutils literal"><span class="pre">float</span></code>…). Only</div>
+<div class="line">the name of variable sits in <strong>stack</strong></div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">We can define where we</div>
+<div class="line">want to</div>
+<div class="line">stock via pointer</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>Memory
+&amp; Performance</td>
+<td><div class="first last line-block">
+<div class="line">Very inefficient !</div>
+<div class="line">Example, a list [1,2,3] take 200 bytes.</div>
+<div class="line"><br /></div>
+<div class="line">Slowly !</div>
+</div>
+</td>
+<td><div class="first last line-block">
+<div class="line">Very efficient !</div>
+<div class="line">Ex, a list {1,2,3} take</div>
+<div class="line">only 16 bytes</div>
+<div class="line">Fast !</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Python 2.7</strong></p>
 <ul class="simple">
 <li>This version is the most stable release, and  the most frequently used. This is scheduled to be the last major version in the 2.x series before it moves into an extended maintenance period. For me, I always work with version 2.7, so all of my notes in this site go with this version.</li>
 <li>We must know that in 2020, python 2.7 will be not supported anymore and all modules will be released only for python3 :( Sometimes I try it, but the syntax is very different from version 2 but we have no choice, so now this’s time to move to python 3 ! I advise that if we start a project now, we should try &amp; work with version 3 with their packages/modules, and our project will be safe in 2020 :)</li>
 </ul>
-<p><strong>Pointer</strong></p>
-<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">j</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="go">5</span>
-</pre></div>
-</div>
-<p>We see that <code class="docutils literal"><span class="pre">i</span></code> refers to an integer on memory has value 5 at first line, then <code class="docutils literal"><span class="pre">j</span></code> refers to <code class="docutils literal"><span class="pre">i</span></code>, means <code class="docutils literal"><span class="pre">j</span></code> also refers to 5. But when we change <code class="docutils literal"><span class="pre">j</span></code> =3, that means <code class="docutils literal"><span class="pre">j</span></code> points to another location on memory. Because <code class="docutils literal"><span class="pre">i</span></code> is an integer which is an immutable object, so there’is not any change on <code class="docutils literal"><span class="pre">i</span></code>. And whats about mutable object <em>list</em> ?</p>
-<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="go">2</span>
-</pre></div>
-</div>
-<p>If 2 <em>lists</em> <code class="docutils literal"><span class="pre">a</span></code> and  <code class="docutils literal"><span class="pre">b</span></code> refer at same object, when <code class="docutils literal"><span class="pre">a</span></code> changes, <code class="docutils literal"><span class="pre">b</span></code> changes also !</p>
 </div>
 
 
