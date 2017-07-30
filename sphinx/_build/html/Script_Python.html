@@ -95,6 +95,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#run-python">3.1. Run Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#python-option-run">3.2. Python option run</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#write-python-code-correctly">3.3. Write Python code correctly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-name-main">3.4. <strong>if __name__ == “__main__”</strong></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Operating_System_Modules.html">4. Operating_System_Modules</a><ul>
@@ -225,15 +226,14 @@
 <h1>3. Code Style &amp; Run<a class="headerlink" href="#code-style-run" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="run-python">
 <h2>3.1. Run Python<a class="headerlink" href="#run-python" title="Permalink to this headline">¶</a></h2>
-<p><strong>Text Editor</strong></p>
-<blockquote>
-<div><blockquote>
-<div>Sublime text
+<p><strong>Text Editor</strong>
+I
+Sublime text
 vim
 NotePad++
-Pycharm</div></blockquote>
-<p>To run a script in python, just type <em>python script.py</em> , then our program will compile and run at the same time</p>
-</div></blockquote>
+Pycharm</p>
+<blockquote>
+<div>To run a script in python, just type <em>python script.py</em> , then our program will compile and run at the same time</div></blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">In fact, python use a program, called the interpreter (<cite>/usr/bin/python</cite> in Linux or <cite>python.exe</cite> in Window) to compile our source code to the bytecode <code class="docutils literal"><span class="pre">*.pyc</span></code>, then execute this bytecode.</p>
@@ -241,11 +241,62 @@ Pycharm</div></blockquote>
 </div>
 <div class="section" id="python-option-run">
 <h2>3.2. Python option run<a class="headerlink" href="#python-option-run" title="Permalink to this headline">¶</a></h2>
-<p>qsdf</p>
+<p>The most common command-line options :</p>
+<p><em>-m</em> : runs a library module as a script which executes inside the __main__ module prior to the execution of the main script.
+python -m mymodule : Python does 2 things : first, import the packages <em>mymodule</em>, then runs library module <em>mymodule</em> as a script.
+Exemple : I have a script <strong>foo.py</strong></p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;hello&#39;</span>
+</pre></div>
+</div>
+<p>then we run this script by 2 ways:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span>$ python foo.py
+hello
+$ python -m foo
+hello
+</pre></div>
+</div>
+<p>We have the same result !</p>
+<p><em>-i</em></p>
+<p>python -i : Enters interactive mode after program execution. This option starts an interactive session immediately after a program has finished execution and is useful for debugging.</p>
+<p><em>-c</em></p>
+<p>The -c cmd option can be used to execute short programs in the form of a command-line option—for example:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;print(&#39;hello world&#39;)&quot;</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><em>-3</em></p>
+<p><em>-t</em></p>
+<p>-t Reports warnings about inconsistent tab usage.</p>
 </div>
 <div class="section" id="write-python-code-correctly">
 <h2>3.3. Write Python code correctly<a class="headerlink" href="#write-python-code-correctly" title="Permalink to this headline">¶</a></h2>
-<p>qsdf</p>
+</div>
+<div class="section" id="if-name-main">
+<h2>3.4. <strong>if __name__ == “__main__”</strong><a class="headerlink" href="#if-name-main" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes we see this notion in source code, that means if we run directly the script from terminal, these command-lines in <code class="docutils literal"><span class="pre">if</span></code> block will be executed .By example we have a script <strong>a.py</strong> :</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s1">&#39;hello&#39;</span>
+</pre></div>
+</div>
+<p>Then run in cmd:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">python</span> <span class="n">a</span><span class="o">.</span><span class="n">py</span>
+<span class="go">hello</span>
+</pre></div>
+</div>
+<p>But if we import <strong>a</strong> into another script python, all commands in if <code class="docutils literal"><span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">&quot;__main__&quot;</span></code> will be not execute, because in this case, <code class="docutils literal"><span class="pre">__name__</span></code> become ‘a’. Exemple we have the script <strong>a.py</strong> like as above, then we import <strong>a.py</strong> into <strong>b.py</strong>:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">a</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s1">&#39;hello b&#39;</span>
+    <span class="nb">print</span> <span class="n">a</span><span class="o">.</span><span class="vm">__name__</span>
+</pre></div>
+</div>
+<p>we run :</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">python</span> <span class="n">b</span><span class="o">.</span><span class="n">py</span>
+<span class="go">hello b</span>
+<span class="go">a</span>
+</pre></div>
+</div>
+<p><em>What’s the use ?</em></p>
+<p>This thing’s used for testing when we write a new module or new sub-script in a grand project. For my above exemple, I can write some testsuite after <em>if __name__ == “__main__”:</em></p>
 </div>
 </div>
 
