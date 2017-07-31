@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>13. Types Mapping Set (1) : Set &mdash; Pythonista Notes 0.1 documentation</title>
+  <title>4. Python Code Style &mdash; Pythonista Notes 0.1 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Pythonista Notes 0.1 documentation" href="index.html"/>
-        <link rel="next" title="14. Program Structure" href="Program_Structure.html"/>
-        <link rel="prev" title="12. Types Mapping Set (1) : Dictionary" href="Types_MappingSet_Dict.html"/> 
+        <link rel="next" title="5. Operating_System_Modules" href="Operating_System_Modules.html"/>
+        <link rel="prev" title="3. Run Python Script" href="Run_Script.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -96,9 +96,9 @@
 <li class="toctree-l2"><a class="reference internal" href="Run_Script.html#python-command-options">3.2. Python command options</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Style_Script.html">4. Python Code Style</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Style_Script.html#indentation">4.1. Indentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Style_Script.html#if-name-main">4.2. if __name__ == “__main__”</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Python Code Style</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#indentation">4.1. Indentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-name-main">4.2. if __name__ == “__main__”</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Operating_System_Modules.html">5. Operating_System_Modules</a><ul>
@@ -142,9 +142,9 @@
 <li class="toctree-l2"><a class="reference internal" href="Types_MappingSet_Dict.html#tips">12.2. Tips</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">13. Types Mapping Set (1) : Set</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#basic">13.1. Basic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tips">13.2. Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Types_MappingSet_Set.html">13. Types Mapping Set (1) : Set</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Types_MappingSet_Set.html#basic">13.1. Basic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Types_MappingSet_Set.html#tips">13.2. Tips</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Program_Structure.html">14. Program Structure</a><ul>
@@ -206,13 +206,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>13. Types Mapping Set (1) : Set</li>
+      <li>4. Python Code Style</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/Types_MappingSet_Set.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/Style_Script.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -225,13 +225,48 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="types-mapping-set-1-set">
-<h1>13. Types Mapping Set (1) : Set<a class="headerlink" href="#types-mapping-set-1-set" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="basic">
-<h2>13.1. Basic<a class="headerlink" href="#basic" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="python-code-style">
+<h1>4. Python Code Style<a class="headerlink" href="#python-code-style" title="Permalink to this headline">¶</a></h1>
+<p><strong>Text Editor</strong></p>
+<p>I recommend these text editors for python development :</p>
+<blockquote>
+<div><ul class="simple">
+<li>Sublime text : very beautiful interface, Python syntax highlighting, Python plugins.</li>
+<li>vim : for all <em>linuxer</em> :p</li>
+<li>NotePad++ : I always use this editor although my friends mocking me :(( Having a perfect NppFPT for virtual machine, and mostly it has an option to backup all my source code each time I do Ctrl+S.</li>
+<li>Pycharm : Full-featured IDE for Python. I tried it once, a very nice interface and efficient but it’s so slow.</li>
+</ul>
+</div></blockquote>
+<div class="section" id="indentation">
+<h2>4.1. Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="tips">
-<h2>13.2. Tips<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="if-name-main">
+<h2>4.2. if __name__ == “__main__”<a class="headerlink" href="#if-name-main" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes we see this notion in source code, that means if we run directly the script from terminal, these command-lines in <code class="docutils literal"><span class="pre">if</span></code> block will be executed .By example we have a script <strong>a.py</strong> :</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s1">&#39;hello&#39;</span>
+</pre></div>
+</div>
+<p>Then run in cmd:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">python</span> <span class="n">a</span><span class="o">.</span><span class="n">py</span>
+<span class="go">hello</span>
+</pre></div>
+</div>
+<p>But if we import <strong>a</strong> into another script python, all commands in if <code class="docutils literal"><span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">&quot;__main__&quot;</span></code> will be not execute, because in this case, <code class="docutils literal"><span class="pre">__name__</span></code> become ‘a’. Exemple we have the script <strong>a.py</strong> like as above, then we import <strong>a.py</strong> into <strong>b.py</strong>:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">a</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="s1">&#39;hello b&#39;</span>
+    <span class="nb">print</span> <span class="n">a</span><span class="o">.</span><span class="vm">__name__</span>
+</pre></div>
+</div>
+<p>we run :</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">python</span> <span class="n">b</span><span class="o">.</span><span class="n">py</span>
+<span class="go">hello b</span>
+<span class="go">a</span>
+</pre></div>
+</div>
+<p><em>What’s the use ?</em></p>
+<p>This thing’s used for testing when we write a new module or new sub-script in a grand project. For my above exemple, I can write some testsuite after <em>if __name__ == “__main__”:</em></p>
 </div>
 </div>
 
@@ -245,10 +280,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Program_Structure.html" class="btn btn-neutral float-right" title="14. Program Structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Operating_System_Modules.html" class="btn btn-neutral float-right" title="5. Operating_System_Modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Types_MappingSet_Dict.html" class="btn btn-neutral" title="12. Types Mapping Set (1) : Dictionary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Run_Script.html" class="btn btn-neutral" title="3. Run Python Script" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

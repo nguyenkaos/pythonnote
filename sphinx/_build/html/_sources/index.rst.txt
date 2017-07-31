@@ -14,7 +14,8 @@ Table of Contents
     
     About_Python
     Install_Pyhon_Module
-    Script_Python
+    Run_Script
+    Style_Script
     Operating_System_Modules
     Types
     Types_Numbers

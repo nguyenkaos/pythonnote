@@ -1,26 +1,17 @@
-Code Style & Run
+Run Python Script
 ---------------------
 
 
 
 Run Python
 ^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-**Text Editor**
-I
-Sublime text
-vim
-NotePad++
-Pycharm
-
     
  To run a script in python, just type *python script.py* , then our program will compile and run at the same time 
  
 .. Note:: In fact, python use a program, called the interpreter (`/usr/bin/python` in Linux or `python.exe` in Window) to compile our source code to the bytecode ``*.pyc``, then execute this bytecode.
 
 
-Python option run
+Python command options
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 We mostly use :class:`python -m mymodule` to run a python source code . But there are other common command-lines options :
@@ -67,61 +58,3 @@ then we run this script by 2 ways:
     
 We have the same result ! 
 Attention with the path to our module, it raise an error if the module isn't in the PYTHON_PATH.We shall see it at `sys module <Operating_System_Modules.html#syspath>`_ 
-
-
-
-    
-Write Python code correctly
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-Indentation
-================
-
-
-
-if __name__ == "__main__"
-==========================
-
-
-Sometimes we see this notion in source code, that means if we run directly the script from terminal, these command-lines in ``if`` block will be executed .By example we have a script **a.py** : 
-
-.. code:: python 
-
-    if __name__ == "__main__":
-        print 'hello'
-
-Then run in cmd:
-
-.. code:: python 
-
-    >>> python a.py
-    hello
- 
-
-But if we import **a** into another script python, all commands in if ``__name__ == "__main__"`` will be not execute, because in this case, ``__name__`` become 'a'. Exemple we have the script **a.py** like as above, then we import **a.py** into **b.py**:
-
-.. code:: python 
-    
-    import a
-    if __name__ == "__main__":
-        print 'hello b'
-        print a.__name__
-
-we run :
-
-.. code:: python 
-    
-    >>> python b.py
-    hello b
-    a
-
-*What's the use ?*
-
-This thing's used for testing when we write a new module or new sub-script in a grand project. For my above exemple, I can write some testsuite after *if __name__ == "__main__":*
-
-
-
-
-
-
