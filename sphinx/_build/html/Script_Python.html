@@ -94,8 +94,11 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">3. Code Style &amp; Run</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#run-python">3.1. Run Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#python-option-run">3.2. Python option run</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#write-python-code-correctly">3.3. Write Python code correctly</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#if-name-main">3.4. <strong>if __name__ == “__main__”</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#write-python-code-correctly">3.3. Write Python code correctly</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#indentation">3.3.1. Indentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#if-name-main">3.3.2. if __name__ == “__main__”</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Operating_System_Modules.html">4. Operating_System_Modules</a><ul>
@@ -241,10 +244,26 @@ Pycharm</p>
 </div>
 <div class="section" id="python-option-run">
 <h2>3.2. Python option run<a class="headerlink" href="#python-option-run" title="Permalink to this headline">¶</a></h2>
-<p>The most common command-line options :</p>
-<p><em>-m</em> : runs a library module as a script which executes inside the __main__ module prior to the execution of the main script.
-python -m mymodule : Python does 2 things : first, import the packages <em>mymodule</em>, then runs library module <em>mymodule</em> as a script.
-Exemple : I have a script <strong>foo.py</strong></p>
+<p>We mostly use <code class="xref py py-class docutils literal"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">mymodule</span></code> to run a python source code . But there are other common command-lines options :</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="p">[</span><span class="o">-</span><span class="n">c</span> <span class="n">command</span> <span class="o">|</span> <span class="o">-</span><span class="n">m</span> <span class="n">module</span><span class="o">-</span><span class="n">name</span> <span class="o">|</span> <span class="n">script</span> <span class="o">|</span> <span class="o">-</span> <span class="p">]</span> <span class="p">[</span><span class="n">args</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>-c</strong></p>
+<p>The -c cmd option can be used to execute short programs in the form of a command-line option—for example:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span>$ python -c &quot;print(&#39;hello world&#39;)&quot;.
+hello world
+</pre></div>
+</div>
+<p><strong>-m</strong></p>
+<p>Runs a library module as a script which executes inside the __main__ module prior to the execution of the main script.
+For this command, example  <code class="xref py py-class docutils literal"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">mymodule</span></code> : Python does 2 things :</p>
+<blockquote>
+<div><ul class="simple">
+<li>First, import the packages <code class="xref py py-class docutils literal"><span class="pre">mymodule</span></code> if , then runs library module <em>mymodule</em> as a script. If the given module isn’t located on the Python module path, an error is handled here and the program will be stop.</li>
+<li>Second, run this module <code class="xref py py-class docutils literal"><span class="pre">mymodule</span></code> like as a script.</li>
+</ul>
+</div></blockquote>
+<p>Exemple : I have a script <strong>foo.py</strong></p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;hello&#39;</span>
 </pre></div>
 </div>
@@ -255,23 +274,16 @@ $ python -m foo
 hello
 </pre></div>
 </div>
-<p>We have the same result !</p>
-<p><em>-i</em></p>
-<p>python -i : Enters interactive mode after program execution. This option starts an interactive session immediately after a program has finished execution and is useful for debugging.</p>
-<p><em>-c</em></p>
-<p>The -c cmd option can be used to execute short programs in the form of a command-line option—for example:</p>
-<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;print(&#39;hello world&#39;)&quot;</span><span class="o">.</span>
-</pre></div>
-</div>
-<p><em>-3</em></p>
-<p><em>-t</em></p>
-<p>-t Reports warnings about inconsistent tab usage.</p>
+<p>We have the same result !
+Attention with the path to our module, it raise an error if the module isn’t in the PYTHON_PATH.We shall see it at <a class="reference external" href="Operating_System_Modules.html#syspath">sys module</a></p>
 </div>
 <div class="section" id="write-python-code-correctly">
 <h2>3.3. Write Python code correctly<a class="headerlink" href="#write-python-code-correctly" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="indentation">
+<h3>3.3.1. Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="if-name-main">
-<h2>3.4. <strong>if __name__ == “__main__”</strong><a class="headerlink" href="#if-name-main" title="Permalink to this headline">¶</a></h2>
+<h3>3.3.2. if __name__ == “__main__”<a class="headerlink" href="#if-name-main" title="Permalink to this headline">¶</a></h3>
 <p>Sometimes we see this notion in source code, that means if we run directly the script from terminal, these command-lines in <code class="docutils literal"><span class="pre">if</span></code> block will be executed .By example we have a script <strong>a.py</strong> :</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="nb">print</span> <span class="s1">&#39;hello&#39;</span>
@@ -297,6 +309,7 @@ hello
 </div>
 <p><em>What’s the use ?</em></p>
 <p>This thing’s used for testing when we write a new module or new sub-script in a grand project. For my above exemple, I can write some testsuite after <em>if __name__ == “__main__”:</em></p>
+</div>
 </div>
 </div>
 
