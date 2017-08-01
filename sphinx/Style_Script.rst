@@ -61,8 +61,9 @@ Docstrings & Comments
     + Un example to run this function
 
 Exemple : 
-.. code:: python
-    
+
+.. code:: python 
+
     def sum3(a,b,c) : 
         """
         This function to get the sum of 3 givent numbers.
