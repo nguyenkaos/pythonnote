@@ -54,7 +54,7 @@ Convention in Python for variable and function names
 Docstrings & Comments
 ==========================
 
-- Docstrings = Explain **how** to use code, and are for the users of our code. This is written between 2 triple quotes. This must always have 3 things :
+- **Docstrings** : Explain **how** to use code, and are for the users of our code. This is written between 2 triple quotes. This must always have 3 things :
 
     + Purpose of the function 
     + Description the given parameters (name, type, note), we use **@param** ; the return values (name, type, note), we use **@return**.
@@ -76,7 +76,7 @@ Exemple :
         """
         return a + b + c
 
-- Comments = explain **why**, and are for the maintainers of our code.
+- **Comments** : explain **why**, and are for the maintainers of our code.
 
 
 
