@@ -31,8 +31,22 @@ Indentation
 
 Exemple:
 
+.. code:: python 
+
     def make_squares(key, value=0):
-        """Return a dictionary and a list..."""
+        """
+        Return a dictionary and a list.
+        
+        @param
+            key : string or numeric
+            value : any type, by default is 0
+        @return
+            a tuple 2 element, the first is dictionnary, other is list
+        
+        - Exemple : 
+            make_squares(4)
+            make_squares(4,99)
+        """
         d = {key: value}
         l = [key, value]
         return d, l
@@ -66,7 +80,7 @@ Exemple :
 
     def sum3(a,b,c) : 
         """
-        This function to get the sum of 3 givent numbers.
+        This function to get the sum of 3 given numbers.
         
         @param: 
             a, b, c : numeric type, raise exception if it lacks one 
@@ -77,12 +91,10 @@ Exemple :
         """
         return a + b + c
 
-.. Note:: When the function is called, the *Docstrings* is in method ``__doc__``. For the above example, typing :class:`print sum3.__doc__` in python interactive and it show our docstring.
+.. Note:: When the function is called, the *Docstrings* is in method ``__doc__``. For the above example, typing :class:`print sum3.__doc__` or :class:`help(sum3)` in python interactive and it show our docstring.
  
 
-
 - **Comments** : Explain **why**, and are for the maintainers of our code.
-
 
 
 if __name__ == "__main__"
