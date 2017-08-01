@@ -99,7 +99,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">4. Python Code Style</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#indentation">4.1. Indentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#convention-in-python-for-variable-and-function-names">4.2. Convention in Python for variable and function names</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#if-name-main">4.3. if __name__ == “__main__”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docstrings-comments">4.3. Docstrings &amp; Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-name-main">4.4. if __name__ == “__main__”</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Operating_System_Modules.html">5. Operating_System_Modules</a><ul>
@@ -274,7 +275,7 @@ return d, l</dd>
 <li>Class: ClassName</li>
 <li>Method name : method_name</li>
 <li>Function : names should be lowercase, with words separated by underscores as necessary to improve readability , example <code class="docutils literal"><span class="pre">function_name</span></code>.</li>
-<li>Variables : Use the function naming rules: lowercase with words separated by underscores as necessary to improve readability.</li>
+<li>Variables : lowercase with words separated by underscores as necessary to improve readability.</li>
 <li>global_var_name</li>
 <li>instance_var_name</li>
 <li>local_var_name</li>
@@ -283,8 +284,24 @@ return d, l</dd>
 <li>ExceptionName : ExceptionName</li>
 </ul>
 </div>
+<div class="section" id="docstrings-comments">
+<h2>4.3. Docstrings &amp; Comments<a class="headerlink" href="#docstrings-comments" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Docstrings = Explain <strong>how</strong> to use code, and are for the users of our code. this must always have 3 things :</p>
+<blockquote>
+<div><ul class="simple">
+<li>Purpose of the function</li>
+<li>Description the parameters (name, type, note), the return values (name, type, note), and any exceptions raised.</li>
+<li>Un example to run this function</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Comments = explain <strong>why</strong>, and are for the maintainers of our code.</p>
+</li>
+</ul>
+</div>
 <div class="section" id="if-name-main">
-<h2>4.3. if __name__ == “__main__”<a class="headerlink" href="#if-name-main" title="Permalink to this headline">¶</a></h2>
+<h2>4.4. if __name__ == “__main__”<a class="headerlink" href="#if-name-main" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes we see this notion in source code, that means if we run directly the script from terminal, these command-lines in <code class="docutils literal"><span class="pre">if</span></code> block will be executed .By example we have a script <strong>a.py</strong> :</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="nb">print</span> <span class="s1">&#39;hello&#39;</span>

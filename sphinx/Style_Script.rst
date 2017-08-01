@@ -43,13 +43,24 @@ Convention in Python for variable and function names
 - Class: ClassName
 - Method name : method_name
 - Function : names should be lowercase, with words separated by underscores as necessary to improve readability , example ``function_name``.
-- Variables : Use the function naming rules: lowercase with words separated by underscores as necessary to improve readability.
+- Variables : lowercase with words separated by underscores as necessary to improve readability.
 - global_var_name
 - instance_var_name
 - local_var_name
 - function_parameter_name
 - Constant name : GLOBAL_CONSTANT_NAME
 - ExceptionName : ExceptionName
+
+Docstrings & Comments
+==========================
+
+- Docstrings = Explain **how** to use code, and are for the users of our code. this must always have 3 things :
+
+    + Purpose of the function 
+    + Description the parameters (name, type, note), the return values (name, type, note), and any exceptions raised.
+    + Un example to run this function
+    
+- Comments = explain **why**, and are for the maintainers of our code.
 
 
 
