@@ -287,17 +287,37 @@ return d, l</dd>
 <div class="section" id="docstrings-comments">
 <h2>4.3. Docstrings &amp; Comments<a class="headerlink" href="#docstrings-comments" title="Permalink to this headline">¶</a></h2>
 <ul>
-<li><p class="first">Docstrings = Explain <strong>how</strong> to use code, and are for the users of our code. this must always have 3 things :</p>
+<li><p class="first">Docstrings = Explain <strong>how</strong> to use code, and are for the users of our code. This is written between 2 triple quotes. This must always have 3 things :</p>
 <blockquote>
 <div><ul class="simple">
 <li>Purpose of the function</li>
-<li>Description the parameters (name, type, note), the return values (name, type, note), and any exceptions raised.</li>
+<li>Description the given parameters (name, type, note), we use <strong>&#64;param</strong> ; the return values (name, type, note), we use <strong>&#64;return</strong>.</li>
 <li>Un example to run this function</li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">Comments = explain <strong>why</strong>, and are for the maintainers of our code.</p>
-</li>
+</ul>
+<p>Exemple :
+.. code:: python</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>def sum3(a,b,c) :</dt>
+<dd><p class="first">“””
+This function to get the sum of 3 givent numbers.</p>
+<dl class="docutils">
+<dt>&#64;param:</dt>
+<dd>a, b, c : numeric type, raise exception if it lacks one</dd>
+<dt>&#64;return:</dt>
+<dd>my_sum : numeric type</dd>
+</dl>
+<p class="last">Example : sum3(3, 4.4, -1)
+“””
+return a + b + c</p>
+</dd>
+</dl>
+</div></blockquote>
+<ul class="simple">
+<li>Comments = explain <strong>why</strong>, and are for the maintainers of our code.</li>
 </ul>
 </div>
 <div class="section" id="if-name-main">

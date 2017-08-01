@@ -54,12 +54,28 @@ Convention in Python for variable and function names
 Docstrings & Comments
 ==========================
 
-- Docstrings = Explain **how** to use code, and are for the users of our code. this must always have 3 things :
+- Docstrings = Explain **how** to use code, and are for the users of our code. This is written between 2 triple quotes. This must always have 3 things :
 
     + Purpose of the function 
-    + Description the parameters (name, type, note), the return values (name, type, note), and any exceptions raised.
+    + Description the given parameters (name, type, note), we use **@param** ; the return values (name, type, note), we use **@return**.
     + Un example to run this function
+
+Exemple : 
+.. code:: python
     
+    def sum3(a,b,c) : 
+        """
+        This function to get the sum of 3 givent numbers.
+        
+        @param: 
+            a, b, c : numeric type, raise exception if it lacks one 
+        @return: 
+            my_sum : numeric type
+        
+        Example : sum3(3, 4.4, -1)
+        """
+        return a + b + c
+
 - Comments = explain **why**, and are for the maintainers of our code.
 
 
