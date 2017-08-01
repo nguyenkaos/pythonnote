@@ -11,6 +11,24 @@ Run Python
 .. Note:: In fact, python use a program, called the interpreter (`/usr/bin/python` in Linux or `python.exe` in Window) to compile our source code to the bytecode ``*.pyc``, then execute this bytecode.
 
 
+Python Interactive
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Python interpreter is usually installed at the path of python installation. To open this, juste typing ``python`` to the shell, we have :
+
+.. code:: python
+    
+    $ python
+    Python 2.7.9 (default, Mar  1 2015, 12:57:24)
+    [GCC 4.9.2] on linux2
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>>
+    
+and from now, we can apply and test all python commands here !!
+
+.. Tip::  For me, this tool is very important on my work. When I write a new function, always I test it directly on Interactive Console with maximum testcase possible. This way helps me avoid many stupid mistakes.
+
+    
 Python command options
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
