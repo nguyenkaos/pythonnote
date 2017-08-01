@@ -33,28 +33,31 @@ The -c cmd option can be used to execute short programs in the form of a command
 
 **-m** 
 
-Runs a library module as a script which executes inside the __main__ module prior to the execution of the main script.
+Runs a library module as a script which executes inside the :class:`__main__` module prior to the execution of the main script.
 For this command, example  :class:`python -m mymodule` : Python does 2 things : 
 
-    - First, import the packages :class:`mymodule` if , then runs library module *mymodule* as a script. If the given module isn't located on the Python module path, an error is handled here and the program will be stop.
-    
+    - First, import the packages :class:`mymodule`. If the given module isn't located on the Python module path, an error is handled here and the program will be stop.
+
     - Second, run this module :class:`mymodule` like as a script.
-    
-    
+
+
 Exemple : I have a script **foo.py**
 
 .. code:: python 
 
     print 'hello'
+    print __name__
     
 then we run this script by 2 ways:
 
-.. code:: python 
+.. code:: python
 
     $ python foo.py
     hello
+    __main__
     $ python -m foo
     hello
-    
+
 We have the same result ! 
 Attention with the path to our module, it raise an error if the module isn't in the PYTHON_PATH.We shall see it at `sys module <Operating_System_Modules.html#syspath>`_ 
+

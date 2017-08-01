@@ -249,21 +249,23 @@ hello world
 </pre></div>
 </div>
 <p><strong>-m</strong></p>
-<p>Runs a library module as a script which executes inside the __main__ module prior to the execution of the main script.
+<p>Runs a library module as a script which executes inside the <code class="xref py py-class docutils literal"><span class="pre">__main__</span></code> module prior to the execution of the main script.
 For this command, example  <code class="xref py py-class docutils literal"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">mymodule</span></code> : Python does 2 things :</p>
 <blockquote>
 <div><ul class="simple">
-<li>First, import the packages <code class="xref py py-class docutils literal"><span class="pre">mymodule</span></code> if , then runs library module <em>mymodule</em> as a script. If the given module isn’t located on the Python module path, an error is handled here and the program will be stop.</li>
+<li>First, import the packages <code class="xref py py-class docutils literal"><span class="pre">mymodule</span></code>. If the given module isn’t located on the Python module path, an error is handled here and the program will be stop.</li>
 <li>Second, run this module <code class="xref py py-class docutils literal"><span class="pre">mymodule</span></code> like as a script.</li>
 </ul>
 </div></blockquote>
 <p>Exemple : I have a script <strong>foo.py</strong></p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;hello&#39;</span>
+<span class="nb">print</span> <span class="vm">__name__</span>
 </pre></div>
 </div>
 <p>then we run this script by 2 ways:</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span>$ python foo.py
 hello
+__main__
 $ python -m foo
 hello
 </pre></div>

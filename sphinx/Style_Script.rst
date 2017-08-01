@@ -16,7 +16,29 @@ I recommend these text editors for python development :
 Indentation
 ================
 
+**Whitespace 1**
 
+    - 4 spaces per indentation level.
+    - Never mix tabs and spaces.
+    - One blank line between functions.
+    - Two blank lines between classes.
+
+**Whitespace 2**
+
+    - Add a space after "," in ``dict``, ``list``, ``tuple``, & *argument lists*, and after ":" in dicts, but not before.
+    - Put spaces around assignments & comparisons (except in argument lists).
+    - No spaces just inside *parentheses* or just before argument lists.
+
+Exemple:
+
+    def make_squares(key, value=0):
+        """Return a dictionary and a list..."""
+        d = {key: value}
+        l = [key, value]
+        return d, l
+
+Convention in Python for variable and function names
+======================================================= 
 
 if __name__ == "__main__"
 ==========================

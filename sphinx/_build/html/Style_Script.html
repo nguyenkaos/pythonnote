@@ -98,7 +98,8 @@
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">4. Python Code Style</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#indentation">4.1. Indentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#if-name-main">4.2. if __name__ == “__main__”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#convention-in-python-for-variable-and-function-names">4.2. Convention in Python for variable and function names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-name-main">4.3. if __name__ == “__main__”</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Operating_System_Modules.html">5. Operating_System_Modules</a><ul>
@@ -239,9 +240,39 @@
 </div></blockquote>
 <div class="section" id="indentation">
 <h2>4.1. Indentation<a class="headerlink" href="#indentation" title="Permalink to this headline">¶</a></h2>
+<p><strong>Whitespace 1</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>4 spaces per indentation level.</li>
+<li>Never mix tabs and spaces.</li>
+<li>One blank line between functions.</li>
+<li>Two blank lines between classes.</li>
+</ul>
+</div></blockquote>
+<p><strong>Whitespace 2</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>Add a space after “,” in <code class="docutils literal"><span class="pre">dict</span></code>, <code class="docutils literal"><span class="pre">list</span></code>, <code class="docutils literal"><span class="pre">tuple</span></code>, &amp; <em>argument lists</em>, and after “:” in dicts, but not before.</li>
+<li>Put spaces around assignments &amp; comparisons (except in argument lists).</li>
+<li>No spaces just inside <em>parentheses</em> or just before argument lists.</li>
+</ul>
+</div></blockquote>
+<p>Exemple:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>def make_squares(key, value=0):</dt>
+<dd>“”“Return a dictionary and a list…”“”
+d = {key: value}
+l = [key, value]
+return d, l</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="section" id="convention-in-python-for-variable-and-function-names">
+<h2>4.2. Convention in Python for variable and function names<a class="headerlink" href="#convention-in-python-for-variable-and-function-names" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="if-name-main">
-<h2>4.2. if __name__ == “__main__”<a class="headerlink" href="#if-name-main" title="Permalink to this headline">¶</a></h2>
+<h2>4.3. if __name__ == “__main__”<a class="headerlink" href="#if-name-main" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes we see this notion in source code, that means if we run directly the script from terminal, these command-lines in <code class="docutils literal"><span class="pre">if</span></code> block will be executed .By example we have a script <strong>a.py</strong> :</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="nb">print</span> <span class="s1">&#39;hello&#39;</span>
