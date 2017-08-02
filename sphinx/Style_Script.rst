@@ -1,6 +1,11 @@
+
+.. Tip:: Programs must be written for people to read, and only incidentally for machines to execute.
+            — Abelson & Sussman, Structure and Interpretation of Computer Programs
+
+
 Python Code Style
 ---------------------
-
+ 
 
 **Text Editor**
 
@@ -84,6 +89,7 @@ Docstrings & Comments
     + Description the given parameters (name, type, note), we use **@param** ; the return values (name, type, note), we use **@return**.
     + Un example to run this function
 
+A linebreak after a block. 
 Exemple : 
 
 .. code:: python 
@@ -97,7 +103,7 @@ Exemple :
         @return: 
             my_sum : numeric type
         
-        Example : sum3(3, 4.4, -1)
+        - Example : sum3(3, 4.4, -1)
         """
         return a + b + c
 
@@ -125,7 +131,7 @@ if __name__ == "__main__"
 ==========================
 
 
-Sometimes we see this notion in source code, that means if we run directly the script from terminal, these command-lines in ``if`` block will be executed .By example we have a script **a.py** : 
+Sometimes we see this notion in source code, that means if we run directly the script from terminal, these command-lines in ``if`` block will be executed .By example we have a script **a.py** :
 
 .. code:: python 
 
