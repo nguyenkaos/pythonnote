@@ -67,7 +67,7 @@ Convention in Python for variable and function names
 
 **Ignored variable**
 
-If you need to assign something but will not need that variable, use *the double underscores* ``__``  :
+If you need to assign something but will not need that variable, use *the double underscores* ``__``  (not a single underscore ``_`` in order to avoid confusion with variable to store the result of the last evaluation) :
 
 .. code:: python 
 
@@ -104,8 +104,22 @@ Exemple :
 .. Note:: When the function is called, the *Docstrings* is in method ``__doc__``. For the above example, typing :class:`print sum3.__doc__` or :class:`help(sum3)` in python interactive and it show our docstring.
  
 
-- **Comments** : Explain **why**, and are for the maintainers of our code.
+- **Comments** : Explain **why**, and are for the maintainers of our code. Genarally there are 3 types : 
 
+    + Block Comments
+    + Inline Comments
+    + Commenting Out Code for Testing
+
+    
+autopep8  
+==========
+
+The library **autopep8** automatically formats Python code to conform to the PEP 8 style guide. So good ! For example, I have a python script named *my_script.py* was bad written, by using this lib, we are safe !
+
+.. code:: python
+
+    pip install autopep8
+    autopep8 --in-place my_script.py
 
 if __name__ == "__main__"
 ==========================

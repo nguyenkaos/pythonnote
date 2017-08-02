@@ -100,7 +100,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#indentation">4.1. Indentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#convention-in-python-for-variable-and-function-names">4.2. Convention in Python for variable and function names</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#docstrings-comments">4.3. Docstrings &amp; Comments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#if-name-main">4.4. if __name__ == “__main__”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#autopep8">4.4. autopep8</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-name-main">4.5. if __name__ == “__main__”</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Operating_System_Modules.html">5. Operating_System_Modules</a><ul>
@@ -293,6 +294,12 @@
 <li>Constant name : GLOBAL_CONSTANT_NAME</li>
 <li>ExceptionName : ExceptionName</li>
 </ul>
+<p><strong>Ignored variable</strong></p>
+<p>If you need to assign something but will not need that variable, use <em>the double underscores</em> <code class="docutils literal"><span class="pre">__</span></code>  (not a single underscore <code class="docutils literal"><span class="pre">_</span></code> in order to avoid confusion with variable to store the result of the last evaluation) :</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;foobar.txt&#39;</span>
+<span class="n">basename</span><span class="p">,</span> <span class="n">__</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="docstrings-comments">
 <h2>4.3. Docstrings &amp; Comments<a class="headerlink" href="#docstrings-comments" title="Permalink to this headline">¶</a></h2>
@@ -326,12 +333,28 @@
 <p class="first admonition-title">Note</p>
 <p class="last">When the function is called, the <em>Docstrings</em> is in method <code class="docutils literal"><span class="pre">__doc__</span></code>. For the above example, typing <code class="xref py py-class docutils literal"><span class="pre">print</span> <span class="pre">sum3.__doc__</span></code> or <code class="xref py py-class docutils literal"><span class="pre">help(sum3)</span></code> in python interactive and it show our docstring.</p>
 </div>
-<ul class="simple">
-<li><strong>Comments</strong> : Explain <strong>why</strong>, and are for the maintainers of our code.</li>
+<ul>
+<li><p class="first"><strong>Comments</strong> : Explain <strong>why</strong>, and are for the maintainers of our code. Genarally there are 3 types :</p>
+<blockquote>
+<div><ul class="simple">
+<li>Block Comments</li>
+<li>Inline Comments</li>
+<li>Commenting Out Code for Testing</li>
+</ul>
+</div></blockquote>
+</li>
 </ul>
 </div>
+<div class="section" id="autopep8">
+<h2>4.4. autopep8<a class="headerlink" href="#autopep8" title="Permalink to this headline">¶</a></h2>
+<p>The library <strong>autopep8</strong> automatically formats Python code to conform to the PEP 8 style guide. So good ! For example, I have a python script named <em>my_script.py</em> was bad written, by using this lib, we are safe !</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">autopep8</span>
+<span class="n">autopep8</span> <span class="o">--</span><span class="ow">in</span><span class="o">-</span><span class="n">place</span> <span class="n">my_script</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="if-name-main">
-<h2>4.4. if __name__ == “__main__”<a class="headerlink" href="#if-name-main" title="Permalink to this headline">¶</a></h2>
+<h2>4.5. if __name__ == “__main__”<a class="headerlink" href="#if-name-main" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes we see this notion in source code, that means if we run directly the script from terminal, these command-lines in <code class="docutils literal"><span class="pre">if</span></code> block will be executed .By example we have a script <strong>a.py</strong> :</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="nb">print</span> <span class="s1">&#39;hello&#39;</span>
