@@ -7,7 +7,7 @@ Python Code Style
 I recommend these text editors for python development :
 
     - Sublime text : very beautiful interface, Python syntax highlighting, Python plugins.
-    - vim : for all *linuxer* :p
+    - vim : for all *linuxer*
     - NotePad++ : I always use this editor although my friends mocking me :(( Having a perfect NppFPT for virtual machine, and mostly it has an option to backup all my source code each time I do Ctrl+S.
     - Pycharm : Full-featured IDE for Python. I tried it once, a very nice interface and efficient but it's so slow.
 
@@ -64,6 +64,16 @@ Convention in Python for variable and function names
 - function_parameter_name
 - Constant name : GLOBAL_CONSTANT_NAME
 - ExceptionName : ExceptionName
+
+**Ignored variable**
+
+If you need to assign something but will not need that variable, use *the double underscores* ``__``  :
+
+.. code:: python 
+
+    filename = 'foobar.txt'
+    basename, __, ext = filename.rpartition('.')
+
 
 Docstrings & Comments
 ==========================
