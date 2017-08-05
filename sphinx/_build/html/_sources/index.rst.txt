@@ -26,6 +26,8 @@ Table of Contents
     Types_MappingSet_Dict
     Types_MappingSet_Set 
     Program_Structure
+    Function
+    Class
     Multithread
     Django
 
