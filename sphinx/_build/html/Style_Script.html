@@ -116,8 +116,11 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Types_Numbers.html">7. Type Numbers</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Types_Numbers.html#basic">7.1. Basic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Types_Numbers.html#tips">7.2. Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Types_Numbers.html#boolean">7.1. Boolean</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Types_Numbers.html#basic">7.1.1. Basic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Types_Numbers.html#tips">7.1.2. Tips</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Types_Sequences_String.html">8. Type Sequence (1) : String</a><ul>
@@ -162,7 +165,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Django.html">16. Django : Web FrameWork</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Django.html#basic">16.1. Basic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Django.html#tips">16.2. Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Django.html#template">16.2. Template</a></li>
 </ul>
 </li>
 </ul>
@@ -242,7 +245,7 @@
 <li>Sublime text : very beautiful interface, Python syntax highlighting, Python plugins.</li>
 <li>vim : for all <em>linuxer</em></li>
 <li>NotePad++ : I always use this editor although my friends mocking me :(( Having a perfect NppFPT for virtual machine, and mostly it has an option to backup all my source code each time I do Ctrl+S.</li>
-<li>Pycharm : Full-featured IDE for Python. I tried it once, a very nice interface and efficient but it’s so slow.</li>
+<li>Pycharm : Full-featured IDE for Python. I tried it once, a very nice interface, autocorrect following PEP8 standart, and efficient but it’s so slow.</li>
 </ul>
 </div></blockquote>
 <div class="section" id="indentation">
@@ -292,6 +295,8 @@
 <li>Method name : method_name</li>
 <li>Function : names should be lowercase, with words separated by underscores as necessary to improve readability , example <code class="docutils literal"><span class="pre">function_name</span></code>.</li>
 <li>Variables : lowercase with words separated by underscores as necessary to improve readability.</li>
+<li>Private methods and properties start with __double_underscore</li>
+<li>“Protected” methods and properties start with _single_underscore</li>
 <li>global_var_name</li>
 <li>instance_var_name</li>
 <li>local_var_name</li>
@@ -319,7 +324,8 @@
 </div></blockquote>
 </li>
 </ul>
-<p>Exemple :</p>
+<p>A linebreak after a block.
+Exemple :</p>
 <div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum3</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span> <span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This function to get the sum of 3 given numbers.</span>
@@ -329,7 +335,7 @@
 <span class="sd">    @return:</span>
 <span class="sd">        my_sum : numeric type</span>
 
-<span class="sd">    Example : sum3(3, 4.4, -1)</span>
+<span class="sd">    - Example : sum3(3, 4.4, -1)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span>
 </pre></div>

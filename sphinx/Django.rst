@@ -6,5 +6,9 @@ Django : Web FrameWork
 Basic
 ^^^^^^^^^^^^^^^
 
-Tips
+Template
 ^^^^^^^^^^^^^^^
+
+**Multiple**
+
+Using a*b : {% widthratio a 1 b %}

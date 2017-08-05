@@ -14,7 +14,7 @@ I recommend these text editors for python development :
     - Sublime text : very beautiful interface, Python syntax highlighting, Python plugins.
     - vim : for all *linuxer*
     - NotePad++ : I always use this editor although my friends mocking me :(( Having a perfect NppFPT for virtual machine, and mostly it has an option to backup all my source code each time I do Ctrl+S.
-    - Pycharm : Full-featured IDE for Python. I tried it once, a very nice interface and efficient but it's so slow.
+    - Pycharm : Full-featured IDE for Python. I tried it once, a very nice interface, autocorrect following PEP8 standart, and efficient but it's so slow.
 
 
 
@@ -63,6 +63,8 @@ Convention in Python for variable and function names
 - Method name : method_name
 - Function : names should be lowercase, with words separated by underscores as necessary to improve readability , example ``function_name``.
 - Variables : lowercase with words separated by underscores as necessary to improve readability.
+- Private methods and properties start with __double_underscore
+- "Protected" methods and properties start with _single_underscore
 - global_var_name
 - instance_var_name
 - local_var_name
